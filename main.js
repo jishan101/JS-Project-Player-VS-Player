@@ -57,6 +57,8 @@ resetButtonElm.addEventListener("click", e => {
     if (document.querySelector(".winner")) {
         document.querySelector(".winner").remove();
     }
+    p1ButtonElm.setAttribute("disabled", "disabled");
+    p2ButtonElm.setAttribute("disabled", "disabled");
 })
 
 function invalid() {
@@ -64,6 +66,8 @@ function invalid() {
         if (!document.querySelector(".invalid")) {
             formElm.insertAdjacentHTML("beforebegin", "<p class = 'invalid'>Please enter a valid number!</p>");
         }
+        p1ButtonElm.setAttribute("disabled", "disabled");
+        p2ButtonElm.setAttribute("disabled", "disabled");
     }
 }
 
